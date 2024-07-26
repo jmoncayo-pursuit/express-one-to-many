@@ -1,6 +1,7 @@
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
+const morgan = require("morgan");
 
 // CONFIGURATION
 const app = express();
@@ -8,6 +9,7 @@ const app = express();
 // MIDDLEWARE
 app.use(cors());
 app.use(express.json());
+app.use(morgan("tiny"));
 
 // ROUTES
 app.get("/", (req, res) => {
@@ -16,6 +18,9 @@ app.get("/", (req, res) => {
 
 const bookmarksController = require("./controllers/bookmarksController.js");
 app.use("/bookmarks", bookmarksController);
+
+const reviewsController = require("./controllers/reviewsController.js");
+app.use("/reviews", reviewsController);
 
 // 404 PAGE
 app.get("*", (req, res) => {
