@@ -2,6 +2,10 @@
 const express = require("express");
 const bookmarks = express.Router();
 
+const reviewsController = require('./reviewsController')
+// localhost:4001/bookmarks/1/reviews
+bookmarks.use('/:bookmark_id/reviews', reviewsController)
+
 // Queries
 const {
   getAllBookmarks,
