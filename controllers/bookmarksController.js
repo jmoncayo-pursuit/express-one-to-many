@@ -1,3 +1,4 @@
+// controllers/bookmarksController.js
 // DEPENDENCIES
 const express = require("express");
 const bookmarks = express.Router();

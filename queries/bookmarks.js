@@ -1,3 +1,4 @@
+// queries/bookmarks.js
 const db = require("../db/dbConfig.js");
 
 const getAllBookmarks = async () => {

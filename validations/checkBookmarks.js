@@ -1,3 +1,4 @@
+// validations/checkBookmarks.js
 // Check that there is a name key/value
 const checkName = (req, res, next) => {
   if (req.body.name) {

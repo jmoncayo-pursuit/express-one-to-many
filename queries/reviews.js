@@ -1,3 +1,4 @@
+//queries/reviews.js
 const db = require("../db/dbConfig.js");
 
 const getAllReviews = async (bookmark_id) => {
